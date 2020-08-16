@@ -1,19 +1,31 @@
+// creating list of global variable
+// time of day
 const today = moment();
+//time of day displayed at hours, minutes, am/pm
 const time = moment().format("HH:mm A");
+//time of day in current 24 hour format
 let currentHour = moment().format("H");
+//empty variable to hold the unique id from the .hour HTML code block
 let newBackground = "";
+//variable to hold the text from the .save-button textarea where it is typed in on the screen by end-user
 let appointText = "";
+//time - correlates to .hour id in 24 hour format
 let appointTime = "";
+//empty array to hold objects of parsed JSON from local storage when adding new appointment information
 let appointArray = [];
-let storedAppoint = "";
 
+//document ready function
 $(document).ready(function () {
 
+    //funciton to add date and time to display
     function addDateAndTime() {
+        //taking today variable and setting format, sending it to display in jumbotron
         $("#currentDay").text(today.format("[Today's Date:] ddd; MMMM Do, YYYY"));
+        //taking time variable and sending it to display under the date in the jumbotron
         $("#timeOfDay").text(time);
     }
-
+    // calling functions to clear entries after they are 24 hours old; change background to represent current, past and future hours; 
+    // adding Date and Time to Jumbotron; and displaying current appointments form local storage
     clearEachDay();
     changeBackground();
     addDateAndTime();
@@ -21,40 +33,63 @@ $(document).ready(function () {
 
     console.log(currentHour);
 
+
+    // function logic to display current appointments
     function showCurrentAppointments() {
-        storedAppoint = JSON.parse(localStorage.getItem("appointments"));
-        if (storedAppoint !== null) {
-            for (let i = 0; i < storedAppoint.length; i++) {
-                let returnedAppoint = storedAppoint[i];
+        //parsing JSON into string variable to hold into array
+        appointArray = JSON.parse(localStorage.getItem("appointments"));
+        //if there are stored appointments
+        if (appointArray !== null) {
+            //iterating over appointArray
+            for (let i = 0; i < appointArray.length; i++) {
+                //setting a variable equal to each index location of appointArray
+                let returnedAppoint = appointArray[i];
+                //using the dot property to pull out details
                 let details = returnedAppoint.details;
+                //using the time property to pull out time
                 let time = returnedAppoint.time
+                //if there are details to display
                 if (details != null) {
+                    //put the details into the textarea of the appropriate sibling/child corresponding to the time ID
                     $("#" + time).siblings().children("textarea").val(details);
                 }
             }
         }
     }
 
+
+//logic to save appointment details from save button click event
     $(".save-button").on("click", function () {
+        //setting appointText equal to the value of the child/sibling of the parent with "descrption" as the class
         appointText = $(this).parent().siblings(".description").children().val();
+        //setting appointTime equal to the ID of the child/sibling of the parent with the mathcing ID
         appointTime = $(this).parent().siblings(".hour").attr("id")
+        //creating a prototype appointment to hold the value of the descripton, hour, and timestamp
         appointment = {
             time: appointTime,
             details: appointText,
             entered: moment()
         }
         console.log(appointment);
+        //setting value of temp array to those appointment objects already in local storage
         tempArray = JSON.parse(localStorage.getItem("appointments"));
+        //if tempArray has no items then create local storage item "appointments" with appropriate key/value pairs
         if (tempArray === null) {
             localStorage.setItem("appointments", JSON.stringify([{ time: appointTime, details: appointText, entered: moment() }]));
+            //else logic
         } else {
+            //push the current version of the appointment object onto the end of tempArray
             tempArray.push(appointment);
+            //set local storage of the tempArray of appointment objects to appointments and stringify for local storage
             localStorage.setItem("appointments", JSON.stringify(tempArray));
         }
+        //take what was the value of the appointment description and display it in the appropriate text area
         $(this).siblings(".description").parent().siblings("textarea").replaceWith($("<textarea>" + appointText + "</textarea>"))
+        //run changeBackground() function to keep appropriate background shading
         changeBackground();
     });
 
+    //function to change background for morning, past, present, future and evening.
     function changeBackground() {
         for (var i = 5; i <= 22; i++) {
             newBackground = i;
@@ -71,14 +106,21 @@ $(document).ready(function () {
         }
     }
 
+    //function to removeItems that are over twenty four hours old
     function clearEachDay() {
-        storedAppoint = JSON.parse(localStorage.getItem("appointments"));
-        if (storedAppoint === null) {
+        //pulls out the locally stored appointments array and parses string to array of objects
+        appointArrastoy = JSON.parse(localStorage.getItem("appointments"));
+        //if there are no stored appointments in local storage end function
+        if (appointArray === null) {
             return;
+            //else logic
         } else {
-            for (var i = 0; i < storedAppoint.length; i++) {
-                if (storedAppoint[i].entered > today.diff(moment(), "1")) {
-                    localStorage.removeItem(storedAppoint[i]);
+            //loops over array of objects from local storage
+            for (var i = 0; i < appointArray.length; i++) {
+                //compares time stamp to see if it si more than 24 hours old
+                if (appointArray[i].entered > today.diff(moment(), "1")) {
+                    //removes item from local storage
+                    localStorage.removeItem(appointArray[i]);
                 }
             }
         }

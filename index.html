@@ -26,11 +26,13 @@
 
   <main class="w-75 container-fluid">
     <!-- Timeblocks go here -->
+    <!-- hardcoded time blocks/couldn't figure out how to do it dynamically with jQuery -->
     <div class="row">
       <div id="hour" class="w-25 text-right hour">Time</div>
       <div id="description" class="w-50 text-center description">Description</div>
       <div id="save-button" class="w-25 text-left saveBtn">Save Button</div>
     </div>
+    <!-- each .hour has a unique ID that correlates to its time of day -->
     <div class="row">
       <div id="5" class="w-25 text-right hour"><strong>5:00 AM</strong></div>
       <div id="description" class="w-50 text-center description"><textarea placeholder="Enter activity here"></textarea>
@@ -142,7 +144,7 @@
   </main>
 
   <div id="spacer"></div>
-
+<!-- added from other projects/re-coded to adjust for .row in CSS -->
   <footer class="sticky-footer" style="display: contents; border-color: black; background-color: grey">
     <div class="container-fluid">
       <div>
