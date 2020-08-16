@@ -9,11 +9,14 @@ let currentHour = moment().format("H");
 
 for (let i = 0; i <= 23; i++) {
     newBackground = i;
-    if (currentHour = i) {
+    if (currentHour === i) {
         $("#" + newBackground).addClass("present");
-    } else if (currentTime > i) {
+        $("#"+ newBackground).sibling("div").children("textarea").addClass("present");
+    } else if (currentHour > i) {
         $("#" + newBackground).addClass("past");
+        $("#" + newBackground).sibling("div").children("textarea").addClass("past");
     } else {
         $("#" + newBackground).addClass("future");
+        $("#" + newBackground).sibling("div").childre("textarea").addClass("future")
     }
 }
