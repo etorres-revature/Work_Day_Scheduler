@@ -37,28 +37,28 @@ $(document).ready(function () {
     // function logic to display current appointments
     function showCurrentAppointments() {
         //parsing JSON into string variable to hold into array
-        appointArray = JSON.parse(localStorage.getItem("appointments"));
+        appointArray = JSON.parse(localStorage.getItem("appointments")) || [];
         //if there are stored appointments
-        if (appointArray !== null) {
-            //iterating over appointArray
-            for (let i = 0; i < appointArray.length; i++) {
-                //setting a variable equal to each index location of appointArray
-                let returnedAppoint = appointArray[i];
-                //using the dot property to pull out details
-                let details = returnedAppoint.details;
-                //using the time property to pull out time
-                let time = returnedAppoint.time
-                //if there are details to display
-                if (details != null) {
-                    //put the details into the textarea of the appropriate sibling/child corresponding to the time ID
-                    $("#" + time).siblings().children("textarea").val(details);
-                }
+        // if (appointArray !== null) {
+        //     //iterating over appointArray
+        for (let i = 0; i < appointArray.length; i++) {
+            //setting a variable equal to each index location of appointArray
+            let returnedAppoint = appointArray[i];
+            //using the dot property to pull out details
+            let details = returnedAppoint.details;
+            //using the time property to pull out time
+            let time = returnedAppoint.time
+            //if there are details to display
+            if (details != null) {
+                //put the details into the textarea of the appropriate sibling/child corresponding to the time ID
+                $("#" + time).siblings().children("textarea").val(details);
             }
         }
+        // }
     }
 
 
-//logic to save appointment details from save button click event
+    //logic to save appointment details from save button click event
     $(".save-button").on("click", function () {
         //setting appointText equal to the value of the child/sibling of the parent with "descrption" as the class
         appointText = $(this).parent().siblings(".description").children().val();
@@ -117,28 +117,28 @@ $(document).ready(function () {
         for (var i = 5; i < 9; i++) {
             newBackground = i;
             //setting the hour div and its sibling with text area to the css value for morning (darkgrayslate background)
-            $("#"+newBackground).addClass("morning");
-            $("#"+newBackground).siblings("div").children("textarea").addClass("morning");
+            $("#" + newBackground).addClass("morning");
+            $("#" + newBackground).siblings("div").children("textarea").addClass("morning");
         }
 
         //iterator to go through the post-work/evening hours
         for (var i = 18; i < 23; i++) {
             newBackground = i;
             //setting the hour div and its sibling with text area to the css value for evening (palevioletred background)
-            $("#"+newBackground).addClass("evening");
-            $("#"+newBackground).siblings("div").children("textarea").addClass("evening");
+            $("#" + newBackground).addClass("evening");
+            $("#" + newBackground).siblings("div").children("textarea").addClass("evening");
         }
     }
 
     //function to removeItems that are over twenty four hours old
     function clearEachDay() {
         //pulls out the locally stored appointments array and parses string to array of objects
-        appointArrastoy = JSON.parse(localStorage.getItem("appointments"));
+        appointArrastoy = JSON.parse(localStorage.getItem("appointments")) || [];
         //if there are no stored appointments in local storage end function
-        if (appointArray === null) {
-            return;
-            //else logic
-        } else {
+        // if (appointArray === null) {
+        //     return;
+        //     //else logic
+        // } else {
             //loops over array of objects from local storage
             for (var i = 0; i < appointArray.length; i++) {
                 //compares time stamp to see if it si more than 24 hours old
@@ -147,6 +147,6 @@ $(document).ready(function () {
                     localStorage.removeItem(appointArray[i]);
                 }
             }
-        }
+        // }
     }
 });
