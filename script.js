@@ -1,23 +1,19 @@
-// $("<div></div>").insertAfter(".row").addClass("row");
-// $("<div></div>").appendTo(".row").last(".row").addClass("w-25 text-right hour");
-// $("<div></div>").appendTo(".row").last(".row").addClass("w-50 text-center description");
-// $("<div></div>").appendTo(".row").last(".row").addClass("w-25 text-left saveBtn");
-// let rowEl = $(".row");
-// let hourEl = $(".w-25 text-right hour");
-// let descriptionEl = $(".w-50 text-center description");
-// let saveBtn = $(".w-25 text-left saveBtn");
+const today = moment();
+const time = moment().format("HH:mm A");
+let newBackground;
 
+$("#currentDay").text(today.format("[Today's Date:] ddd; MMMM Do, YYYY"));
+$("#timeOfDay").text(time);
 
-// for (var i = 0; i < 17; i++) {
-//     rowEl.after("<div class='row'></div>");
-// }
+let currentHour = moment().format("H");
 
-// $("<div></div>").appendTo(".row:not(:first)").addClass("w-25 text-right hour");
-// $("<div><textarea/></div>").appendTo(".row:not(:first)").addClass("w-50 text-center description");
-// $("<div></div>").appendTo(".row:not(:first)").addClass("w-25 text-left saveBtn");
-
-// function addTime() {
-//     $(".w-25 text-right hour").text("9:00 AM")
-// };
-
-// addTime();
+for (let i = 0; i <= 23; i++) {
+    newBackground = i;
+    if (currentHour = i) {
+        $("#" + newBackground).addClass("present");
+    } else if (currentTime > i) {
+        $("#" + newBackground).addClass("past");
+    } else {
+        $("#" + newBackground).addClass("future");
+    }
+}

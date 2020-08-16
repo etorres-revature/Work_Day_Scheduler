@@ -133,3 +133,11 @@ h3 {
 #spacer {
   height: 45px;
 }
+
+h1 {
+  font-weight: 725;
+}
+
+.lead {
+  text-decoration: underline;
+}
