@@ -73,9 +73,13 @@ $(document).ready(function () {
 
     function clearEachDay() {
         storedAppoint = JSON.parse(localStorage.getItem("appointments"));
-        for (var i = 0; i < storedAppoint.length; i++) {
-            if (storedAppoint[i].entered > today.diff(moment(), "1")) {
-                localStorage.removeItem(storedAppoint[i]);
+        if (storedAppoint === null) {
+            return;
+        } else {
+            for (var i = 0; i < storedAppoint.length; i++) {
+                if (storedAppoint[i].entered > today.diff(moment(), "1")) {
+                    localStorage.removeItem(storedAppoint[i]);
+                }
             }
         }
     }
