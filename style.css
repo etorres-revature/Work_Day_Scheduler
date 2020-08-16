@@ -74,6 +74,16 @@ textarea {
   color: white;
 }
 
+.morning {
+  background-color: darkslategray;
+  color: white;
+}
+
+.evening {
+  background-color: palevioletred;
+  color: white;
+}
+
 .future {
   background-color: #77dd77;
   color: white;

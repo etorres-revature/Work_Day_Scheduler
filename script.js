@@ -91,18 +91,42 @@ $(document).ready(function () {
 
     //function to change background for morning, past, present, future and evening.
     function changeBackground() {
-        for (var i = 5; i <= 22; i++) {
+        //loop to go through working hours 9 am to 5 pm
+        for (var i = 9; i <= 17; i++) {
+            //setting newBackground variable to the current value of i
             newBackground = i;
+            //logic for the current hour being the same as i/newBackground
             if (currentHour == i) {
+                //setting the hour div and its sibling with text area to the css value for present (red background)
                 $("#" + newBackground).addClass("present");
                 $("#" + newBackground).siblings("div").children("textarea").addClass("present");
+                //logic for if the hour is in the future
             } else if (currentHour > i) {
+                //setting the hour div and its sibling with text area to the css value for future (green background)
                 $("#" + newBackground).addClass("past");
                 $("#" + newBackground).siblings("div").children("textarea").addClass("past");
+                //past hours are captured in the else 
             } else {
+                //setting the hour div and its sibling with text area to the css value for past (gray background)
                 $("#" + newBackground).addClass("future");
                 $("#" + newBackground).siblings("div").children("textarea").addClass("future")
             }
+        }
+
+        //iterator to go through the pre-work/morning hours
+        for (var i = 5; i < 9; i++) {
+            newBackground = i;
+            //setting the hour div and its sibling with text area to the css value for morning (darkgrayslate background)
+            $("#"+newBackground).addClass("morning");
+            $("#"+newBackground).siblings("div").children("textarea").addClass("morning");
+        }
+
+        //iterator to go through the post-work/evening hours
+        for (var i = 18; i < 23; i++) {
+            newBackground = i;
+            //setting the hour div and its sibling with text area to the css value for evening (palevioletred background)
+            $("#"+newBackground).addClass("evening");
+            $("#"+newBackground).siblings("div").children("textarea").addClass("evening");
         }
     }
 
