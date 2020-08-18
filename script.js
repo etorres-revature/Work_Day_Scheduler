@@ -14,6 +14,8 @@ let appointTime = "";
 //empty array to hold objects of parsed JSON from local storage when adding new appointment information
 let appointArray = [];
 
+
+
 //document ready function
 $(document).ready(function () {
 
@@ -68,14 +70,14 @@ $(document).ready(function () {
         appointment = {
             time: appointTime,
             details: appointText,
-            entered: moment()
+            entered: today
         }
         console.log(appointment);
         //setting value of temp array to those appointment objects already in local storage
         tempArray = JSON.parse(localStorage.getItem("appointments"));
         //if tempArray has no items then create local storage item "appointments" with appropriate key/value pairs
         if (tempArray === null) {
-            localStorage.setItem("appointments", JSON.stringify([{ time: appointTime, details: appointText, entered: moment() }]));
+            localStorage.setItem("appointments", JSON.stringify([{ time: appointTime, details: appointText, entered: today }]));
             //else logic
         } else {
             //push the current version of the appointment object onto the end of tempArray
@@ -141,6 +143,7 @@ $(document).ready(function () {
         // } else {
         //loops over array of objects from local storage
         for (var i = 0; i < appointArray.length; i++) {
+            console.log("this is the moment object", appointArray[i].entered);
             //compares time stamp to see if it is more than 24 hours old
             if (appointArray[i].entered > moment().isBefore(appointArray[i].entered)) {
                 //removes item from local storage
