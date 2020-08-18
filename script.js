@@ -133,7 +133,7 @@ $(document).ready(function () {
     //function to removeItems that are over twenty four hours old
     function clearEachDay() {
         //pulls out the locally stored appointments array and parses string to array of objects
-        appointArrastoy = JSON.parse(localStorage.getItem("appointments")) || [];
+        appointArray = JSON.parse(localStorage.getItem("appointments")) || [];
         //if there are no stored appointments in local storage end function
         // if (appointArray === null) {
         //     return;
