@@ -141,7 +141,7 @@ $(document).ready(function () {
         // } else {
         //loops over array of objects from local storage
         for (var i = 0; i < appointArray.length; i++) {
-            //compares time stamp to see if it si more than 24 hours old
+            //compares time stamp to see if it is more than 24 hours old
             if (appointArray[i].entered > moment().isBefore(appointArray[i].entered)) {
                 //removes item from local storage
                 localStorage.removeItem(appointArray[i]);
