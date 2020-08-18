@@ -145,7 +145,7 @@ $(document).ready(function () {
         for (var i = 0; i < appointArray.length; i++) {
             console.log("this is the moment object", appointArray[i].entered);
             //compares time stamp to see if it is more than 24 hours old
-            if (appointArray[i].entered > moment().isBefore(appointArray[i].entered)) {
+            if (moment().isBefore(appointArray[i].entered, "day")) {
                 //removes item from local storage
                 localStorage.removeItem(appointArray[i]);
             }
