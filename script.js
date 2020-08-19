@@ -33,7 +33,7 @@ $(document).ready(function () {
     addDateAndTime();
     showCurrentAppointments();
 
-    console.log(currentHour);
+    // console.log(currentHour);
 
 
     // function logic to display current appointments
@@ -143,12 +143,18 @@ $(document).ready(function () {
         // } else {
         //loops over array of objects from local storage
         for (var i = 0; i < appointArray.length; i++) {
+            // today = today.format("")
+            console.log("this is today", today);
             console.log("this is the moment object", appointArray[i].entered);
+            // console.log("this is the difference", today.diff(appointArray[i].entered, "1"));
             //compares time stamp to see if it is more than 24 hours old
-            if (moment().isBefore(appointArray[i].entered, "day")) {
+            if (today.diff(appointArray[i].entered, "day") >= 1) {
+                console.log("you are in the if statement");
                 //removes item from local storage
-                localStorage.removeItem(appointArray[i]);
+                appointArray.splice(i);
             }
+            
+            localStorage.setItem("appointments", JSON.stringify(appointArray));
         }
     }
 });
