@@ -39,7 +39,7 @@ $(document).ready(function () {
     // function logic to display current appointments
     function showCurrentAppointments() {
         //parsing JSON into string variable to hold into array
-        appointArray = JSON.parse(localStorage.getItem("appointments")) || [];
+        var appointArray = JSON.parse(localStorage.getItem("appointments")) || [];
         //if there are stored appointments
         // if (appointArray !== null) {
         //     //iterating over appointArray
@@ -62,19 +62,21 @@ $(document).ready(function () {
 
     //logic to save appointment details from save button click event
     $(".save-button").on("click", function () {
+        //preventing default behavior of the button
+        event.preventDefault()
         //setting appointText equal to the value of the child/sibling of the parent with "descrption" as the class
         appointText = $(this).parent().siblings(".description").children().val();
         //setting appointTime equal to the ID of the child/sibling of the parent with the mathcing ID
         appointTime = $(this).parent().siblings(".hour").attr("id")
         //creating a prototype appointment to hold the value of the descripton, hour, and timestamp
-        appointment = {
+        var appointment = {
             time: appointTime,
             details: appointText,
             entered: today
         }
         console.log(appointment);
         //setting value of temp array to those appointment objects already in local storage
-        tempArray = JSON.parse(localStorage.getItem("appointments"));
+        var tempArray = JSON.parse(localStorage.getItem("appointments"));
         //if tempArray has no items then create local storage item "appointments" with appropriate key/value pairs
         if (tempArray === null) {
             localStorage.setItem("appointments", JSON.stringify([{ time: appointTime, details: appointText, entered: today }]));
