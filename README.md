@@ -22,7 +22,15 @@ Additionally, there is a clear data funciton that uses the timestamp to determin
 
 Finally, timeblocks are color coded.  
 
-* Morning hours have been assigned a background of <div class="text-darkslategray">Dark Slate Gray</div>.  
+* Morning hours have been assigned a background of Dark Slate Gray.  
+
+* The workday is from 9:00 AM to 5:00 PM:
+
+    * ```diff # Time that has passed has a background of gray ```
+    * ```diff - The current hour has a background of red```
+    * ```diff + Time that is in the future has a background color of green```
+
+* Evening hours have been assigned a background of Pale Violet Red.
 
 
 ### :computer: Technologies Used :computer:
