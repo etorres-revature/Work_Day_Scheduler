@@ -2,13 +2,27 @@
 
 > Time is a funny thing; it is never as long as it has seemed - Anon
 
-Every day 
+Every day we make choices about how to spend our time.  Sometimes we commit to social engagements with our friends.  Other times, our work may create commitments that cannot be missed.  Weddings, court dates, coffe klatches, job interviews, pickup basketball, budget meetings, the litany of potential activities can quickly become overwhelming.  
+
+This [Work_Day_Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) is the perfect app to keep track of all your events.
 
 > Time waits for no one - Folklore*
 
+![Work Day Scheduler](./assets/images/screenshots/work-day-scheduler.png)
+
+The work day scheduler has three columns and 18 rows representing time from 5:00 AM to 10:00 PM.  The left-hand column represents the time of the associated event.  The middle column is for entering the details/descripton of each event.  The right-hand row contains the button to save the appointment.
+
 > Lost Time is never found again - Benjamin Franklin*
 
+The middle column is a textarea where event details can be entered.  Once entered, the save button will persist the information entered into local storage.  Time, details, and a timestamp are created in JavaScript as an array of objects and stringified for local storage.  The local storage string is parsed to JSON to render each appointment into its appropriate time slot.  
+
+Additionally, there is a clear data funciton that uses the timestamp to determine whether or not appointment entries are more than one day old.  If the entry is older than one day, then it is removed from local storage. 
+
 > The key is in not spending time, but in investing it - Stephen R. Covey*
+
+Finally, timeblocks are color coded.  
+
+* Morning hours have been assigned a background of <div class="text-dark-slate-gray">Dark Slate Gray</div> .  
 
 
 ### :computer: Technologies Used :computer:
@@ -51,7 +65,7 @@ Elements and components such as grids, typography, color, and imagery are not on
 
 **Moment.js** is a free and open source JavaScript library that removes the need to use the native Date object directly.  The library is a wrapper for the Date object making it easier to use.  Moment.js extends date capabilities with a variety of features, such as relative time, calendar time, durations, and multi-language support.  
 
-*Moment.js* content borrowed rom <a target="_blank" rel="noopener noreferrer">[this page](https://www.webfx.com/blog/web-design/javascript-dates-moment-js/).
+*Moment.js* content borrowed from <a target="_blank" rel="noopener noreferrer">[this page](https://www.webfx.com/blog/web-design/javascript-dates-moment-js/).
 
 ## Author :sunglasses:
 
