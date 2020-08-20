@@ -26,9 +26,9 @@ Finally, timeblocks are color coded.
 
 * The workday is from 9:00 AM to 5:00 PM:
 
-    * <div class="text-gray">Time that has passed has a background of gray</div>
-    * <div class="text-red"> The current hour has a background of red</div>
-    * <div class="text-green">Time that is in the future has a background color of green</div>
+    * <p>Time that has passed has a background of <span style="color:gray">GRAY</span></p>
+    * <p> The current hour has a background of <span style="color:red">RED</span><p>
+    * <p>Time that is in the future has a background color of <span style="color:green">GREEN</span></p>
 
 * Evening hours have been assigned a background of Pale Violet Red.
 
