@@ -1,6 +1,12 @@
-# :calendar: [Work_Day_Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) :calendar
+# :calendar: [Work_Day_Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) :calendar:
 
+> Time is a funny thing; it is never as long as it has seemed - Anon
 
+> Time waits for no one - Anon*
+
+> Lost Time is never found again - Benjamin Franklin*
+
+> The key is in not spending time, but in investing it - Stephen R. Covey*
 
 
 ### :computer: Technologies Used :computer:
@@ -25,8 +31,6 @@ Separation of formating and content also makes it feasible to present the same m
 
 *Bootstrap 4* content borrowed from <a target="_blank" rel="noopener noreferrer">[this page](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)).</a>
 
-*CSS* content borrowed from <a target="_blank" rel="noopener noreferrer">[this page](https://en.wikipedia.org/wiki/Cascading_Style_Sheets).</a>
-
 #### :page_with_curl: MaterializeCSS :page_with_curl:
 
 **MaterializeCSS** combines the classic principles of successful design along with innovation and technology. The goal is to develop a system of design that allows for a unified user experience across all their products on any platform.
@@ -50,3 +54,5 @@ The author can be reached at etorresnotary@gmail.com.
 ###### License
 
 This product is unlicensed.
+
+*Quotes about time from [HERE](https://www.actitime.com/time-management/best-time-quotes/).
