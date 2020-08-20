@@ -26,9 +26,9 @@ Finally, timeblocks are color coded.
 
 * The workday is from 9:00 AM to 5:00 PM:
 
-    * ```diff # Time that has passed has a background of gray ```
-    * ```diff - The current hour has a background of red```
-    * ```diff + Time that is in the future has a background color of green```
+    * <div class="text-gray">Time that has passed has a background of gray</div>
+    * <div class="text-red"> The current hour has a background of red</div>
+    * <div class="text-green">Time that is in the future has a background color of green</div>
 
 * Evening hours have been assigned a background of Pale Violet Red.
 
