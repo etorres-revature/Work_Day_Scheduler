@@ -22,15 +22,16 @@ Additionally, there is a clear data funciton that uses the timestamp to determin
 
 Finally, timeblocks are color coded.  
 
-* Morning hours have been assigned a background of Dark Slate Gray.  
+* Morning hours have been assigned a background of DARK SLATE GRAY.  
 
 * The workday is from 9:00 AM to 5:00 PM:
 
-    * <p>Time that has passed has a background of <span style="color:gray">GRAY</span></p>
-    * <p> The current hour has a background of <span style="color:red">RED</span><p>
-    * <p>Time that is in the future has a background color of <span style="color:green">GREEN</span></p>
+    * <p>Time that has passed has a background of <tspan fill="gray">GRAY</tspan></p>
+    * <p> The current hour has a background of <tspan fill="red">RED</tspan></p>
+    * <p>Time that is in the future has a background color of <tspan fill="green">GREEN</tspan></p>
 
-* Evening hours have been assigned a background of Pale Violet Red.
+* Evening hours have been assigned a background of PALE VIOLET RED.
+
 
 
 ### :computer: Technologies Used :computer:
