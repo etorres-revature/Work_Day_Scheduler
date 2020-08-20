@@ -2,7 +2,9 @@
 
 > Time is a funny thing; it is never as long as it has seemed - Anon
 
-> Time waits for no one - Anon*
+Every day 
+
+> Time waits for no one - Folklore*
 
 > Lost Time is never found again - Benjamin Franklin*
 
@@ -44,6 +46,12 @@ Elements and components such as grids, typography, color, and imagery are not on
 **JavaScript (JS)** is one of the core technologies of the World Wide Web (along with HTML and CSS). It enables interactive web pages and is an essential part of web applications.  JS is a multi-faceted, scripting language that provides versatility through Application Programming Interfaces (APIs) and Document Object Model (DOM) manipulation, among others.
 
 *JavaScript* content borrowed from <a target="_blank" rel="noopener noreferrer">[this page](https://en.wikipedia.org/wiki/JavaScript).</a>
+
+#### :hourglass: Moment.js :hourglass:
+
+**Moment.js** is a free and open source JavaScript library that removes the need to use the native Date object directly.  The library is a wrapper for the Date object making it easier to use.  Moment.js extends date capabilities with a variety of features, such as relative time, calendar time, durations, and multi-language support.  
+
+*Moment.js* content borrowed rom <a target="_blank" rel="noopener noreferrer">[this page](https://www.webfx.com/blog/web-design/javascript-dates-moment-js/).
 
 ## Author :sunglasses:
 
