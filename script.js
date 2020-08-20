@@ -113,7 +113,7 @@ $(document).ready(function () {
             } else {
                 //setting the hour div and its sibling with text area to the css value for past (gray background)
                 $("#" + newBackground).addClass("future");
-                $("#" + newBackground).siblings("div").children("textarea").addClass("future")
+                $("#" + newBackground).siblings("div").children("textarea").addClass("future");
             }
         }
 
