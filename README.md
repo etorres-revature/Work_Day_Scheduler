@@ -26,7 +26,7 @@ Finally, timeblocks are color coded.
 
 * The workday is from 9:00 AM to 5:00 PM:
 
-    * Time that has passed has a background of ![#284646](https://placehold.it/18/284646?text=+) GRAY. ![#284646](https://placehold.it/18/284646?text=+)
+    * Time that has passed has a background of ![#528b8b](https://placehold.it/18/582b8b?text=+) GRAY. ![#528b8b](https://placehold.it/18/528b8b284646?text=+)
     * The current hour has a background of ![#ff0000](https://placehold.it/18/ff0000?text=+) RED. ![#ff0000](https://placehold.it/18/ff0000?text=+)
     * Time that is in the future has a background color of ![#157500](https://placehold.it/18/15750?text=+) GREEN. ![#157500](https://placehold.it/18/15750?text=+)
 
