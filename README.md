@@ -22,7 +22,7 @@ Additionally, there is a clear data funciton that uses the timestamp to determin
 
 Finally, timeblocks are color coded.  
 
-* Morning hours have been assigned a background of <div class="text-dark-slate-gray">Dark Slate Gray</div> .  
+* Morning hours have been assigned a background of <div class="text-darkslategray">Dark Slate Gray</div>.  
 
 
 ### :computer: Technologies Used :computer:
