@@ -22,15 +22,15 @@ Additionally, there is a clear data funciton that uses the timestamp to determin
 
 Finally, timeblocks are color coded.  
 
-* Morning hours have been assigned a background of DARK SLATE GRAY.  
+* Morning hours have been assigned a background of ![#2f4f4f](https://placehold.it/18/2f4f4f?text=+)DARK SLATE GRAY ![#2f4f4f](https://placehold.it/18/2f4f4f?text=+)
 
 * The workday is from 9:00 AM to 5:00 PM:
 
-    * Time that has passed has a background of ![#528b8b](https://placehold.it/18/582b8b?text=+) GRAY. ![#528b8b](https://placehold.it/18/528b8b284646?text=+)
-    * The current hour has a background of ![#ff0000](https://placehold.it/18/ff0000?text=+) RED. ![#ff0000](https://placehold.it/18/ff0000?text=+)
-    * Time that is in the future has a background color of ![#157500](https://placehold.it/18/15750?text=+) GREEN. ![#157500](https://placehold.it/18/15750?text=+)
+    * Time that has passed has a background of ![#808080](https://placehold.it/18/808080?text=+) GRAY ![#808080](https://placehold.it/18/808080?text=+)
+    * The current hour has a background of ![#ff0000](https://placehold.it/18/ff0000?text=+) RED ![#ff0000](https://placehold.it/18/ff0000?text=+)
+    * Time that is in the future has a background color of ![#157500](https://placehold.it/18/15750?text=+) GREEN ![#157500](https://placehold.it/18/15750?text=+)
 
-* Evening hours have been assigned a background of ![#db7093](https://placehold.it/18/db7093?text=+) PALE VIOLET RED. ![#db7093](https://placehold.it/18/db7093?text=+)
+* Evening hours have been assigned a background of ![#db7093](https://placehold.it/18/db7093?text=+) PALE VIOLET RED ![#db7093](https://placehold.it/18/db7093?text=+)
 
 For maximum efficiency, be sure to use the [Work Day Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) in conjunciton with the [Task List](https://etorres-revature.github.io/To_Do-Local_Storage/) app.
 
