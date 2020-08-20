@@ -4,19 +4,19 @@
 
 Every day we make choices about how to spend our time.  Sometimes we commit to social engagements with our friends.  Other times, our work may create commitments that cannot be missed.  Weddings, court dates, coffe klatches, job interviews, pickup basketball, budget meetings, the litany of potential activities can quickly become overwhelming.  
 
-This [Work_Day_Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) is the perfect app to keep track of all your events.
+This [Work Day Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) is the perfect app to keep track of all your events.
 
 > Time waits for no one - Folklore*
 
 ![Work Day Scheduler](./assets/images/screenshots/work-day-scheduler.png)
 
-The work day scheduler has three columns and 18 rows representing time from 5:00 AM to 10:00 PM.  The left-hand column represents the time of the associated event.  The middle column is for entering the details/descripton of each event.  The right-hand row contains the button to save the appointment.
+The Work Day Scheduler has three columns and 18 rows representing time from 5:00 AM to 10:00 PM.  The left-hand column represents the time of the associated event.  The middle column is for entering the details/descripton of each event.  The right-hand row contains the button to save the appointment.
 
 > Lost Time is never found again - Benjamin Franklin*
 
 The middle column is a textarea where event details can be entered.  Once entered, the save button will persist the information entered into local storage.  Time, details, and a timestamp are created in JavaScript as an array of objects and stringified for local storage.  The local storage string is parsed to JSON to render each appointment into its appropriate time slot.  
 
-Additionally, there is a clear data funciton that uses the timestamp to determine whether or not appointment entries are more than one day old.  If the entry is older than one day, then it is removed from local storage. 
+Additionally, there is a clear data function that uses the timestamp to determine whether or not appointment entries are more than one day old.  If the entry is older than one day, then it is removed from local storage. 
 
 > The key is in not spending time, but in investing it - Stephen R. Covey*
 
@@ -26,9 +26,9 @@ Finally, timeblocks are color coded.
 
 * The workday is from 9:00 AM to 5:00 PM:
 
-    * Time that has passed has a background of ![#808080](https://placehold.it/18/808080?text=+)GRAY![#808080](https://placehold.it/18/808080?text=+)
-    * The current hour has a background of ![#ff0000](https://placehold.it/18/ff0000?text=+)RED![#ff0000](https://placehold.it/18/ff0000?text=+)
-    * Time that is in the future has a background color of ![#157500](https://placehold.it/18/15750?text=+)GREEN![#157500](https://placehold.it/18/15750?text=+)
+    * Time that has occurred already is given a background of ![#d3d3d3](https://placehold.it/18/d3d3d3?text=+)GRAY![#d3d3d3](https://placehold.it/18/d3d3d3?text=+)
+    * The current hour has a background of ![#ff6961](https://placehold.it/18/ff6961?text=+)RED![#ff6961](https://placehold.it/18/ff6961?text=+)
+    * Time that is in the future has a background color of ![#77dd77](https://placehold.it/18/77dd77?text=+)GREEN![#77dd77](https://placehold.it/18/77dd77?text=+)
 
 * Evening hours have been assigned a background of ![#db7093](https://placehold.it/18/db7093?text=+)PALE VIOLET RED![#db7093](https://placehold.it/18/db7093?text=+)
 
