@@ -168,3 +168,11 @@ h1 {
 .lead {
   text-decoration: underline;
 }
+
+#currentDay {
+  color: red;
+}
+
+#timeOfDay {
+  color: orangered;
+}

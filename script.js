@@ -24,7 +24,7 @@ $(document).ready(function () {
         //taking today variable and setting format, sending it to display in jumbotron
         $("#currentDay").text(today.format("[Today's Date:] ddd; MMMM Do, YYYY"));
         //taking time variable and sending it to display under the date in the jumbotron
-        $("#timeOfDay").text(time);
+        $("#timeOfDay").text("Time: "+time);
     }
     // calling functions to clear entries after they are 24 hours old; change background to represent current, past and future hours; 
     // adding Date and Time to Jumbotron; and displaying current appointments form local storage
