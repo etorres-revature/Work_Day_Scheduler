@@ -5,8 +5,7 @@ const today = moment();
 const time = moment().format("HH:mm A");
 //time of day in current 24 hour format
 let currentHour = moment().format("H");
-//empty variable to hold the unique id from the .hour HTML code block
-let newBackground = "";
+
 //variable to hold the text from the .save-button textarea where it is typed in on the screen by end-user
 let appointText = "";
 //time - correlates to .hour id in 24 hour format
@@ -79,7 +78,7 @@ $(document).ready(function () {
         var tempArray = JSON.parse(localStorage.getItem("appointments"));
         //if tempArray has no items then create local storage item "appointments" with appropriate key/value pairs
         if (tempArray === null) {
-            localStorage.setItem("appointments", JSON.stringify([{ time: appointTime, details: appointText, entered: today }]));
+            localStorage.setItem("appointments", JSON.stringify(appointment));
             //else logic
         } else {
             //push the current version of the appointment object onto the end of tempArray
@@ -97,23 +96,21 @@ $(document).ready(function () {
     function changeBackground() {
         //loop to go through working hours 9 am to 5 pm
         for (var i = 9; i <= 17; i++) {
-            //setting newBackground variable to the current value of i
-            newBackground = i;
-            //logic for the current hour being the same as i/newBackground
+             //logic for the current hour being the same as i/newBackground
             if (currentHour == i) {
                 //setting the hour div and its sibling with text area to the css value for present (red background)
-                $("#" + newBackground).addClass("present");
-                $("#" + newBackground).siblings("div").children("textarea").addClass("present");
+                $("#" + i).addClass("present");
+                $("#" + i).siblings("div").children("textarea").addClass("present");
                 //logic for if the hour is in the future
             } else if (currentHour > i) {
                 //setting the hour div and its sibling with text area to the css value for future (green background)
-                $("#" + newBackground).addClass("past");
-                $("#" + newBackground).siblings("div").children("textarea").addClass("past");
+                $("#" + i).addClass("past");
+                $("#" + i).siblings("div").children("textarea").addClass("past");
                 //past hours are captured in the else 
             } else {
                 //setting the hour div and its sibling with text area to the css value for past (gray background)
-                $("#" + newBackground).addClass("future");
-                $("#" + newBackground).siblings("div").children("textarea").addClass("future");
+                $("#" + i).addClass("future");
+                $("#" + i).siblings("div").children("textarea").addClass("future");
             }
         }
 
