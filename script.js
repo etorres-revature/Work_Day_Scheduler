@@ -116,18 +116,16 @@ $(document).ready(function () {
 
         //iterator to go through the pre-work/morning hours
         for (var i = 5; i < 9; i++) {
-            newBackground = i;
             //setting the hour div and its sibling with text area to the css value for morning (darkgrayslate background)
-            $("#" + newBackground).addClass("morning");
-            $("#" + newBackground).siblings("div").children("textarea").addClass("morning");
+            $("#" + i).addClass("morning");
+            $("#" + i).siblings("div").children("textarea").addClass("morning");
         }
 
         //iterator to go through the post-work/evening hours
         for (var i = 18; i < 23; i++) {
-            newBackground = i;
             //setting the hour div and its sibling with text area to the css value for evening (palevioletred background)
-            $("#" + newBackground).addClass("evening");
-            $("#" + newBackground).siblings("div").children("textarea").addClass("evening");
+            $("#" + i).addClass("evening");
+            $("#" + i).siblings("div").children("textarea").addClass("evening");
         }
     }
 
