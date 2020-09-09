@@ -1,4 +1,4 @@
-# :calendar: [Work_Day_Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) :calendar:
+# :calendar: [Work Day Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) :calendar:
 
 > Time is a funny thing; it is never as long as it has seemed - Anon
 
