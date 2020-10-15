@@ -2,7 +2,7 @@
 
 > Time is a funny thing; it is never as long as it has seemed - Anon
 
-Every day we make choices about how to spend our time.  Sometimes we commit to social engagements with our friends.  Other times, our work may create commitments that cannot be missed.  Weddings, court dates, coffe klatches, job interviews, pickup basketball, budget meetings, the litany of potential activities can quickly become overwhelming.  
+Every day we make choices about how to spend our time.  Sometimes we commit to social engagements with our friends.  Other times, our work may create commitments that cannot be missed.  Weddings, court dates, coffee klatches, job interviews, pickup basketball, budget meetings, the litany of potential activities can quickly become overwhelming.  
 
 This [Work Day Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) is the perfect app to keep track of all your events.
 
@@ -10,7 +10,7 @@ This [Work Day Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/
 
 ![Work Day Scheduler](./assets/images/screenshots/work-day-scheduler.png)
 
-The Work Day Scheduler has three columns and 18 rows representing time from 5:00 AM to 10:00 PM.  The left-hand column represents the time of the associated event.  The middle column is for entering the details/descripton of each event.  The right-hand row contains the button to save the appointment.
+The Work Day Scheduler has three columns and 18 rows representing time from 5:00 AM to 10:00 PM.  The left-hand column represents the time of the associated event.  The middle column is for entering the details/description of each event.  The right-hand row contains the button to save the appointment.
 
 > Lost Time is never found again - Benjamin Franklin*
 
@@ -20,7 +20,7 @@ Additionally, there is a clear data function that uses the timestamp to determin
 
 > The key is in not spending time, but in investing it - Stephen R. Covey*
 
-Finally, timeblocks are color coded.  
+Finally, time blocks are color coded.  
 
 * Morning hours have been assigned a background of ![#2f4f4f](https://placehold.it/18/2f4f4f?text=+)DARK SLATE GRAY![#2f4f4f](https://placehold.it/18/2f4f4f?text=+)
 
@@ -32,13 +32,13 @@ Finally, timeblocks are color coded.
 
 * Evening hours have been assigned a background of ![#db7093](https://placehold.it/18/db7093?text=+)PALE VIOLET RED![#db7093](https://placehold.it/18/db7093?text=+)
 
-For maximum efficiency, be sure to use the [Work Day Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) in conjunciton with the [Task List](https://etorres-revature.github.io/To_Do-Local_Storage/) app.
+For maximum efficiency, be sure to use the [Work Day Scheduler](https://etorres-revature.github.io/Work_Day_Scheduler/) in conjunction with the [Task List](https://etorres-revature.github.io/To_Do-Local_Storage/) app.
 
 ### :computer: Technologies Used :computer:
 
 #### :memo: HTML5 :memo:
 
-**HTML5** is a markup language used for structuring and presenting content on the World Wide Web.  The goals are to improve the language with support for the latest multi-media and other new features; to keep the language both easily readable by humans and consistently understood by computers and devices; and to remain backward compatible to older software.  Many new symantic features are included.
+**HTML5** is a markup language used for structuring and presenting content on the World Wide Web.  The goals are to improve the language with support for the latest multi-media and other new features; to keep the language both easily readable by humans and consistently understood by computers and devices; and to remain backward compatible to older software.  Many new symantec features are included.
 
 *HTML5* content borrowed from <a target="_blank" rel="noopener noreferrer">[this page](https://en.wikipedia.org/wiki/HTML5).</a>
 
@@ -46,7 +46,7 @@ For maximum efficiency, be sure to use the [Work Day Scheduler](https://etorres-
 
 **Cascading Style Sheets (CSS)** is a stylesheet language used for describing the presentation of a document written in a markup language (such as HTML5).  CSS is designed to enable the separation of presentation and content; including layout, colors, and fonts.  This separation improves content accessibility to provide more flexibility and control in the specification of presentation characteristics, enabling multiple web pages to share formatting by specifying relevant CSS in a separate file, which reduces complexity and repetition in the structural content (HTML), as well as enabling the file to be cached to improve the page load speed between the pages that share the file and its formatting.
 
-Separation of formating and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice, and on Braille-based tactile devices. 
+Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice, and on Braille-based tactile devices. 
 
 *CSS* content borrowed from <a target="_blank" rel="noopener noreferrer">[this page](https://en.wikipedia.org/wiki/Cascading_Style_Sheets).</a>
 
